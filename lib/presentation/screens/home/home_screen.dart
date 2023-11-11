@@ -315,7 +315,8 @@ class _HomeState extends State<Home> {
                   state is AlreadyJoined ||
                   state is SuccessToJoin ||
                   state is GroupJoinedFull ||
-                  state is DataOfGroups) {
+                  state is DataOfGroups||
+              state is GetMessageSuccess) {
                 return ListView.builder(
                   reverse: true,
                   shrinkWrap: true,

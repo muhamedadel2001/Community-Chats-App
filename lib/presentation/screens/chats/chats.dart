@@ -2,6 +2,7 @@ import 'package:community/bussines_logic/data_cubit.dart';
 import 'package:community/core/my_cache_keys.dart';
 import 'package:community/core/text_constants.dart';
 import 'package:community/data/local/my_cache.dart';
+import 'package:community/data/remote/send_notification_api/notification_api.dart';
 import 'package:flutter/material.dart';
 import 'package:community/core/screens.dart' as screens;
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -173,6 +174,8 @@ class _ChatsState extends State<Chats> {
                         ),
                         InkWell(
                           onTap: () async {
+                            NotificationApi().notificationApi(title:DataCubit.get(context)
+                                .myemail['fullName'],body: messageController.text );
                             if (messageController.text.isNotEmpty) {
                              await DataCubit.get(context).sendMessage(
                                   groupId: MyCache.getString(

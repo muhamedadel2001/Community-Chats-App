@@ -40,6 +40,18 @@ dependencies:
   fluttertoast: ^8.2.1
   url_launcher: ^6.1.10
   flutter_launcher_icons: ^0.13.1
+  firebase_messaging: ^14.6.8
+  firebase_analytics: ^10.5.0
+  dio: ^5.1.2
+  awesome_notifications: ^0.8.1
+  flutter_notification_channel: ^2.0.0
+
+
+
+
+
+
+
 
 
 
